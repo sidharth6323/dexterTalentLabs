@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="base.css" /> 
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-device-width: 420px)"/>
+    <link rel="stylesheet" href="style.css" media="screen and (min-device-width: 421px)"/>
 </head>
 <style>
 @font-face {
@@ -20,10 +23,33 @@ body {
     overflow-y: hidden;
     transition: all 0.3s ease;
 }
+#preloader {
+    position: absolute;
+    top: 24%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#ffffff;
+    z-index: 99;
+    height: 100%;
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 42%;
+    top:15%;
+    margin: 0px 0 0 0px;
+}
 </style>
 
 <body style="background: #F7F7F7;
 ">
+<div id="preloader">
+        <div id="status">&nbsp;
+        <img src="static/img/loading2.gif"></div>
+    </div>
     <div class="row">
         <nav id="blacknav" class="navbar navbar-inverse" style="height:10px;">
             <div class="container-fluid" style="height:10px;">
@@ -37,7 +63,7 @@ body {
                     <a class="navbar-brand" href="/"><img src="static/img/top_logo.png" style="margin-top:-18%;margin-left:50%;"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right hidden-lg hidden-sm" style="margin-top:2.5%;">
+                    <ul class="nav navbar-nav navbar-right hidden-lg hidden-sm" style="margin-top:2.5%;" id="menumob">
                         <li style="height:50%;"><a href="about.html">About</a></li>
                         <li style="height:50%;"><a href="blog.html">Blog</a></li>
                         <li style="height:50%;"><a href="service.html">Services</a></li>
@@ -87,5 +113,90 @@ body {
     </div>
     <iframe frameborder="0" width="100%" style="height:576px;overflow-x:hidden;
   overflow-Y:hidden;" src="http://dextertalentlabs.blogspot.com/?view=sidebar"></iframe>
+  <br><br><br><br><br><br>
+  <footer style="background:#202020;">
+        <div class="container">
+            
+                    <div class="row">
+                    <br><br>
+                        <div class="col-sm-4">
+                            <div class="footer-group">
+                                <br>
+                                <br>
+                                <span class="glyphicon glyphicon-phone" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                                <br>
+                                <br>
+                                <div class="content" style="color:#838383;text-align:center">
+                                    <h4>Phone</h4>
+                                    <p>Phone: (080)41115676
+                                        <br>
+                                    </p>
+                                    <p>Mobile: +91-9886559155
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer-group">
+                                <br>
+                                <br>
+                                <span class="glyphicon glyphicon-send" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                                <br>
+                                <br>
+                                <div class="content" style="color:#838383;text-align:center">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:janaki@dextertalentlabs.com" target="_blank"> janaki@dextertalentlabs.com</a></p>
+                                    <p><a href="mailto:write2us@dextertalentlabs.com" target="_blank"> write2us@dextertalentlabs.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4" >
+                            <div class="footer-group">
+                                <br>
+                                <br>
+                                <span class="glyphicon glyphicon-map-marker" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                                <br>
+                                <br>
+                                <div class="content" style="color:#838383;text-align:center">
+                                    <h4>Address</h4>
+                                    <address>
+                                        Dexter Talent Labs,
+                                        <br> Janatha Bazaar Signal,
+                                        <br> Banashankari 3rd Stage,
+                                        <br> Bangalore -560085
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                            <small> &copy2015, DEXTER TALENT LABS</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+<script>
+    jQuery(window).load(function() {
+    // will first fade out the loading animation
+    jQuery("#status").delay(1000).fadeOut();
+    // will fade out the whole DIV that covers the website.
+    jQuery("#preloader").delay(1000).fadeOut();
+   
+})
+    $(document).ready(function() {
+        $(".team1").click(function() {
+            $(".text1").css({
+                "display": "block"
+            });
+        });
+    });
+    </script>
 </html>

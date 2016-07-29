@@ -5,137 +5,11 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="base.css" /> 
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-device-width: 420px)"/>
+    <link rel="stylesheet" href="style.css" media="screen and (min-device-width: 421px)"/>
 </head>
 <style>
-@font-face {
-    font-family: myFirstFont;
-    src: url(static/fonts/GothamRounded-Light.otf);
-}
-
-body {
-    font-family: myFirstFont;
-    overflow-x: hidden;
-    transition: all 0.3s ease;
-}
-
-.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid black;
-    margin-left: -45.8%;
-}
-
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #000;
-    margin-left: -0.8%;
-}
-
-.verticalLine {
-    border-left: 2px solid #000;
-}
-
-#endpoint {
-    float: left;
-    border: 2px solid #000000;
-    border-radius: 15px;
-    height: 20px;
-    width: 20px;
-}
-
-#line {
-    border-top: dashed 2px #000;
-    width: 200px;
-    float: left;
-    margin-top: 10px;
-}
-
-#event {
-    float: left;
-    border: 7px solid #000000;
-    height: 25px;
-    width: 25px;
-    transition: ease-out all 0.2s;
-}
-
-#event:hover {
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    background-color: #ccc;
-    transition: ease-in all 0.2s;
-}
-
-.box {
-    width: 200px;
-    height: 90px;
-    background: #FFF;
-    margin: 40px auto;
-}
-
-
-/*==================================================
- * Effect 2
- * ===============================================*/
-
-.effect2 {
-    position: relative;
-}
-
-.effect2:before,
-.effect2:after {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    bottom: 15px;
-    left: 10px;
-    width: 50%;
-    top: 80%;
-    max-width: 300px;
-    background: #777;
-    box-shadow: 0 15px 10px #777;
-    transform: rotate(-3deg);
-}
-
-.effect2:after {
-    transform: rotate(3deg);
-    right: 10px;
-    left: auto;
-}
-
-@media screen and (min-width: 480px) {
-    .getintouch {
-        width: 39%;
-    }
-}
-
-.service {
-    transition: all 0.3s ease;
-}
-
-.service:hover {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: rotateZ(-5deg) scale(1.2);
-    transition: all 0.3s ease;
-}
-
-.social {
-    transition: all 0.3s ease;
-}
-
-.social:hover {
-    background: rgba(0, 147, 221, 0.3);
-    border: 4px solid rgba(0, 147, 221, 0.9);
-    transform: scale(1.1);
-    transition: all 0.3s ease;
-}
-
 .emailbtn {
     text-decoration: none;
     display: block;
@@ -144,7 +18,6 @@ body {
     padding-top: 5px;
     transition: all ease 0.5s;
 }
-
 .emailbtn:hover {
     transition: all ease 0.5s;
 }
@@ -162,13 +35,14 @@ body {
     animation-timing-function: ease-out;
     animation-duration: 1s;
 }
-.socialanim
-{
-	animation-name: slidefromright;
+
+.socialanim {
+    animation-name: slidefromright;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
     animation-duration: 1s;
 }
+
 @keyframes dropHeader {
     0% {
         transform: translateY(-80px);
@@ -190,6 +64,7 @@ body {
         opacity: 1;
     }
 }
+
 @keyframes slidefromright {
     0% {
         transform: translateX(100px);
@@ -200,14 +75,13 @@ body {
         opacity: 1;
     }
 }
-
 </style>
 
 <body style="background:#f7f7f7">
     <div id="preloader">
         <div id="status">&nbsp;
-        <img src="static/img/top_logo.png">
-        <img src="static/img/loading.gif" style="margin-left:-35%;"></div>
+            <img src="static/img/top_logo.png">
+            <img src="static/img/loading.gif" style="margin-left:-35%;"></div>
     </div>
     <div class="row">
         <nav id="blacknav" class="navbar navbar-inverse" style="height:10px;">
@@ -222,7 +96,7 @@ body {
                     <a class="navbar-brand" href="/"><img src="static/img/top_logo.png" style="margin-top:-18%;margin-left:50%;"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right hidden-lg hidden-sm" style="margin-top:2.5%;">
+                    <ul class="nav navbar-nav navbar-right hidden-lg hidden-sm" style="margin-top:2.5%;" id="menumob">
                         <li style="height:50%;"><a href="about.html">About</a></li>
                         <li style="height:50%;"><a href="blog.html">Blog</a></li>
                         <li style="height:50%;"><a href="service.html">Services</a></li>
@@ -253,7 +127,7 @@ body {
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar" style="background:#ffffff;">
                     <ul class="nav navbar-nav navbar-right" style="margin-top:2.0%;color:#000;">
-                        <li style="height:50%;"><a style="color:#000;" href="about.html" >About</a></li>
+                        <li style="height:50%;"><a style="color:#000;" href="about.html">About</a></li>
                         <li style="height:50%;"><a style="color:#000;" href="blog.html">Blog</a></li>
                         <li style="height:50%;"><a style="color:#000;" href="service.html">Services</a></li>
                         <li style="height:50%;"><a style="color:#000;" href="talent.html">Available Talents</a></li>
@@ -281,7 +155,7 @@ body {
             <h2 align="center">Get in Touch</h2>
             <hr style="border:1px solid #efeff4;width:260px">
             <br>
-            <div class="row" style="margin-left:50px;">
+            <div class="row" id="social">
                 <div class="col-sm-4">
                     <a href="#">
                         <img class="social" src="static/img/fb.png" width="80" height="80">
@@ -305,7 +179,7 @@ body {
                     <h4 style="width:100%; text-align:center; border-bottom: 1px solid #bbbbbb; line-height:0.1em; margin:10px 0 20px;"><span style="padding:0 10px;color:#bbbbbb;background:#fff;">or</span></h4>
                 </div>
                 <br>
-                <div style="margin-left:35%;padding-bottom:1.2%;">
+                <div class="emailbutton">
                     <a href="#" class="emailbtn">
                         <img src="static/img/email.png" width="35" height="35">
                         <span style="font-size:18px" class="write">Write to Us</span>
@@ -323,8 +197,8 @@ body {
                 <h3 align="center">Our services</h3>
                 <hr style="border:2px solid #efeff4;width:260px">
                 <br>
-                <div class="row">
-                    <div class="col-sm-3 col-sm-offset-1">
+                <div class="row" id="service">
+                    <div class="col-sm-3 col-sm-offset-1" id="m_bottom">
                         <a href="#">
                             <img class="service" src="static/img/talent.jpg" width="200" height="80">
                         </a>
@@ -357,7 +231,7 @@ body {
         <div class="row" style=";border: 1px solid #ccc;background:#ffffff;">
             <div class="col-sm-4">
                 <br>
-                <img src="static/img/banner2.png">
+                <img class="hidden-xs hidden-sm" src="static/img/banner2.png">
                 <br>
                 <br>
                 <br>
@@ -411,84 +285,69 @@ body {
     <footer style="background:#202020;">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="footer-group">
-                                <div class="dtl-icon grey-icon">
-                                    <i class="entyp-mobile-1"></i>
-                                </div>
-                                <div class="content">
-                                    <h4>Phone</h4>
-                                    <p>Phone: (080)41115676
-                                        <br>
-                                    </p>
-                                    <p>Mobile: +91-9886559155
-                                        <br>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="footer-group">
-                                <div class="dtl-icon white-icon">
-                                    <i class="entyp-paper-plane"></i>
-                                </div>
-                                <div class="content">
-                                    <h4>Email</h4>
-                                    <p><a href="mailto:janaki@dextertalentlabs.com" target="_blank"> janaki@dextertalentlabs.com</a></p>
-                                    <p><a href="mailto:write2us@dextertalentlabs.com" target="_blank"> write2us@dextertalentlabs.com</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="footer-group">
-                                <div class="dtl-icon grey-icon">
-                                    <i class="entyp-compass-1"></i>
-                                </div>
-                                <div class="content">
-                                    <h4>Address</h4>
-                                    <address>
-                                        Dexter Talent Labs,
-                                        <br> Janatha Bazaar Signal,
-                                        <br> Banashankari 3rd Stage,
-                                        <br> Bangalore -560085
-                                    </address>
-                                </div>
-                            </div>
+                <br>
+                <br>
+                <div class="col-sm-4">
+                    <div class="footer-group">
+                        <br>
+                        <br>
+                        <span class="glyphicon glyphicon-phone" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                        <br>
+                        <br>
+                        <div class="content" style="color:#838383;text-align:center">
+                            <h4>Phone</h4>
+                            <p>Phone: (080)41115676
+                                <br>
+                            </p>
+                            <p>Mobile: +91-9886559155
+                                <br>
+                            </p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <a href="http://www.twitter.com/dextertalentlab" target="_blank">
-                                <div class="dtl-icon white-icon fill-icon sm-icon">
-                                    <i class="entyp-twitter-1"></i>
-                                </div>
-                            </a>
-                            <a href="http://www.facebook.com/dextertalentlabs" target="_blank">
-                                <div class="dtl-icon white-icon fill-icon sm-icon">
-                                    <i class=" entyp-facebook-1"></i>
-                                </div>
-                            </a>
-                            <a href="http://plus.google.com/117769118231984471869" target="_blank">
-                                <div class="dtl-icon white-icon fill-icon sm-icon">
-                                    <i class="entyp-gplus-1"></i>
-                                </div>
-                            </a>
-                            <a href="http://www.linkedin.com/company/dexter-talent-labs" target="_blank">
-                                <div class="dtl-icon white-icon fill-icon sm-icon">
-                                    <i class="entyp-linkedin-1"></i>
-                                </div>
-                            </a>
+                </div>
+                <div class="col-sm-4">
+                    <div class="footer-group">
+                        <br>
+                        <br>
+                        <span class="glyphicon glyphicon-send" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                        <br>
+                        <br>
+                        <div class="content" style="color:#838383;text-align:center">
+                            <h4>Email</h4>
+                            <p><a href="mailto:janaki@dextertalentlabs.com" target="_blank"> janaki@dextertalentlabs.com</a></p>
+                            <p><a href="mailto:write2us@dextertalentlabs.com" target="_blank"> write2us@dextertalentlabs.com</a></p>
                         </div>
-                        <div class="col-sm-12 text-center">
-                            <div class="copyright">
-                                ©2015, Dexter Talent Labs
-                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="footer-group">
+                        <br>
+                        <br>
+                        <span class="glyphicon glyphicon-map-marker" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                        <br>
+                        <br>
+                        <div class="content" style="color:#838383;text-align:center">
+                            <h4>Address</h4>
+                            <address>
+                                Dexter Talent Labs,
+                                <br> Janatha Bazaar Signal,
+                                <br> Banashankari 3rd Stage,
+                                <br> Bangalore -560085
+                            </address>
                         </div>
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <div class="row">
+                <small> &copy2015, DEXTER TALENT LABS</small>
+            </div>
+        </div>
+        </div>
         </div>
     </footer>
     <div class="timeline" style="margin-left:5%;margin-top:-1%;display:none">
