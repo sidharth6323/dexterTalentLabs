@@ -1,6 +1,9 @@
 .getintouch {
         width: 90%;
     }
+.col-margin {
+    margin: 25px 0;
+  }
 #social
 {
 	margin-left:35%;
