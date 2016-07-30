@@ -89,7 +89,7 @@
                         <li style="height:50%;"><a href="about.html">About</a></li>
                         <li style="height:50%;"><a href="blog.html">Blog</a></li>
                         <li style="height:50%;"><a href="service.html">Services</a></li>
-                        <li style="height:50%;"><a href="talents.html">Available Talents</a></li>
+                        <!--<li style="height:50%;"><a href="talents.html">Available Talents</a></li>-->
                         <li style="height:50%;"><a href="news.html">News</a></li>
                         <li style="height:50%;"><a href="contact.html">Contact</a></li>
                     </ul>
@@ -119,7 +119,7 @@
                         <li style="height:50%;"><a style="color:#000;" href="about.html">About</a></li>
                         <li style="height:50%;"><a style="color:#000;" href="blog.html">Blog</a></li>
                         <li style="height:50%;"><a style="color:#000;" href="service.html">Services</a></li>
-                        <li style="height:50%;"><a style="color:#000;" href="talent.html">Available Talents</a></li>
+                        <!--<li style="height:50%;"><a href="talents.html">Available Talents</a></li>-->
                         <li style="height:50%;"><a style="color:#000;" href="news.html">News</a></li>
                         <li style="height:50%;"><a style="color:#000;" href="contact.html">Contact</a></li>
                     </ul>
@@ -187,29 +187,32 @@
                 <hr style="border:2px solid #efeff4;width:260px">
                 <br>
                 <div class="row" id="service">
-                    <div class="col-sm-3 col-sm-offset-1" id="m_bottom">
-                        <a href="#">
-                            <img class="service" src="static/img/talent.jpg" width="200" height="80">
-                        </a>
-                    </div>
-                    <div class="col-sm-3 ">
-                        <a href="#">
+                    
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <a href="service.html#djobs">
                             <img class="service" src="static/img/djobs.jpg" width="140" height="100">
                         </a>
                     </div>
                     <div class="col-sm-3" style="margin-left:-8%;">
-                        <a href="#">
+                        <a href="service.html#hack">
                             <img class="service" src="static/img/hack.jpg" width="200" height="100">
                         </a>
                     </div>
                     <div class="col-sm-3" style="margin-left:-3%;">
-                        <a href="#">
+                        <a href="service.html#techtalk">
                             <img class="service" src="static/img/techtalk.jpg" width="200" height="100">
+                        </a>
+                    </div>
+                    <div class="col-sm-3 " id="m_bottom">
+                        <a href="service.html#exit">
+                            <img class="service" src="static/img/exit.png" width="200" height="100">
                         </a>
                     </div>
                 </div>
                 <br>
+                <a href="service.html">
                 <h4 align="center"> Learn More >></h4>
+                </a>
                 <br>
             </div>
         </div>
@@ -236,7 +239,8 @@
                     <br>
                     <br>
                 </p>
-                <button class="btn btn-default" style="margin-left:50%;">Learn More >></button>
+                <a href="about.html">
+                <button class="btn btn-default" style="margin-left:50%;">Learn More >></button></a>
             </div>
         </div>
     </div>
@@ -362,7 +366,7 @@
                     <h3 style="text-align:center;padding-top:11%;margin-left:10%;">1st Hackathon (6 till now)</h3>
                 </div>
                 <div class="box effect2" style="margin-left:-40%;margin-bottom:5%;">
-                    <h3 style="text-align:center;padding-top:11%;margin-left:10%;">Djobs, Our 1st App</h3>
+                    <h3 style="text-align:center;padding-top:11%;margin-left:10%;">djobs, Our 1st App</h3>
                 </div>
                 <div class="arrow">
                     <div class="arrow-up" style="margin-left:-4%;"></div>
@@ -450,7 +454,7 @@ $(".upper1").click(function() {
 }
 
 #preloader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
