@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dexter Talent Labs</title>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="base.css" /> 
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-device-width: 420px)"/>
+    <link rel="stylesheet" href="style.css" media="screen and (min-device-width: 421px)"/>
+</head>
+<style>
+
+.navanim {
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+
+.caranim {
+    animation-name: slidefromleft;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+
+.socialanim {
+    animation-name: slidefromright;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidefromleft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidefromright {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+</style>
+
+<body style="background:#f7f7f7">
+    <div id="preloader">
+        <div id="status">&nbsp;
+            <img src="static/img/top_logo.png">
+            <img src="static/img/loading.gif" style="margin-left:-35%;"></div>
+    </div>
+    <div class="row">
+        <nav id="blacknav" class="navbar navbar-inverse" style="height:10px;">
+            <div class="container-fluid" style="height:10px;">
+                <div class="navbar-header" style="height:10px;">
+                    <br>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="height:10%;margin-top:-3%">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="static/img/top_logo.png" style="margin-top:-18%;margin-left:50%;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right hidden-lg hidden-sm" style="margin-top:2.5%;" id="menumob">
+                        <li style="height:50%;"><a href="about.html">About</a></li>
+                        <li style="height:50%;"><a href="blog.html">Blog</a></li>
+                        <li style="height:50%;"><a href="service.html">Services</a></li>
+                        <!--<li style="height:50%;"><a href="talents.html">Available Talents</a></li>-->
+                        <li style="height:50%;"><a href="news.html">News</a></li>
+                        <li style="height:50%;"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!--<div class="col-sm-5 col-sm-offset-1">
+<img src="../static/img/top_logo.png" style="padding-top:3%;margin-left:5px;">
+</div>-->
+    <div id="whitenav" class="row" style="margin-top:-1.6%;">
+        <nav class="navbar navbar-inverse hidden-xs" style="height:100px;background:#fff;color:#ffffff;">
+            <div class="container-fluid" style="border-bottom: 1px solid #ccc;">
+                <div class="navbar-header" style="height:100px;">
+                    <br>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a style="margin-top:-10%;margin-left:10%" class="navbar-brand" href="/" style="color:#000;"><img src="static/img/logo.jpg" width="200" height="70"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar" style="background:#ffffff;">
+                    <ul class="nav navbar-nav navbar-right" style="margin-top:2.0%;color:#000;">
+                        <li style="height:50%;"><a style="color:#000;" href="about.html">About</a></li>
+                        <li style="height:50%;"><a style="color:#000;" href="blog.html">Blog</a></li>
+                        <li style="height:50%;"><a style="color:#000;" href="service.html">Services</a></li>
+                        <!--<li style="height:50%;"><a href="talents.html">Available Talents</a></li>-->
+                        <li style="height:50%;"><a style="color:#000;" href="news.html">News</a></li>
+                        <li style="height:50%;"><a style="color:#000;" href="contact.html">Contact</a></li>
+                    </ul>
+                    <br>
+                    <br>
+                    <div style="margin-left:88%;margin-top:1% ;opacity:0.9" class="hidden-xs">
+                    </div>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="row" style="margin-left:15px" style="box-shadow: 0 0 10px #cccccc;">
+        <div class="carousal">
+            <img src="static/img/c1.jpg" height="350" width="800" class="hidden-xs c1" style="float:left;transition: all 0.3s ease;z-index:2;">
+            <img src="static/img/c2.jpg" height="350" width="800" class="hidden-xs c2" style="float:left;transition: all 0.3s ease;position:absolute;left:15px;z-index:-10;">
+            <img src="static/img/c3.jpg" height="350" width="800" class="hidden-xs c3" style="float:left;transition: all 0.3s ease;position:absolute;left:15px;z-index:-90;">
+            <img src="static/img/c41.jpg" height="350" width="800" class="hidden-xs c4" style="float:left;transition: all 0.3s ease;position:absolute;left:15px;z-index:-100;">
+        </div>
+        <div class="col-sm-4 getintouch" style="float:left;border:1px solid #ccc;margin-left:0px;background:#fff;">
+            <h2 align="center">Get in Touch</h2>
+            <hr style="border:1px solid #efeff4;width:260px">
+            <br>
+            <div class="row" id="social">
+                <div class="col-sm-4 col-margin">
+                    <a href="#">
+                        <img class="social" src="static/img/fb.png" width="80" height="80">
+                    </a>
+                </div>
+                <div class="col-sm-4 col-margin">
+                    <a href="#">
+                        <img class="social" src="static/img/twitter.png" width="80" height="80">
+                    </a>
+                </div>
+                <div class="col-sm-4 col-margin">
+                    <a href="#">
+                        <img class="social" src="static/img/icon31.png" width="80" height="80">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <br>
+                <br>
+                <div style="width:20%;margin-left:40%;">
+                    <h4 style="width:100%; text-align:center; border-bottom: 1px solid #bbbbbb; line-height:0.1em; margin:10px 0 20px;"><span style="padding:0 10px;color:#bbbbbb;background:#fff;">or</span></h4>
+                </div>
+                <br>
+                <div class="emailbutton">
+                    <a href="#" class="emailbtn">
+                        <img src="static/img/email.png" width="35" height="35">
+                        <span style="font-size:18px" class="writetous">Write to Us</span>
+                    </a>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container" style="width:98%;box-shadow: 0 0 10px #cccccc;">
+        <div class="row">
+            <div class="col-sm-12" style=";border: 1px solid #ccc;background:#ffffff;">
+                <h3 align="center">Our services</h3>
+                <hr style="border:2px solid #efeff4;width:260px">
+                <br>
+                <div class="row" id="service">
+                    
+                    <div class="col-sm-3 col-sm-offset-1 col-margin">
+                        <a href="service.html#djobs">
+                            <img class="service" src="static/img/djobs1.jpg" width="140" height="100">
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-margin" style="margin-left:-8%;">
+                        <a href="service.html#hack">
+                            <img class="service" src="static/img/hack.jpg" width="200" height="100">
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-margin" style="margin-left:-3%;">
+                        <a href="service.html#techtalk">
+                            <img class="service" src="static/img/techtalk.jpg" width="200" height="100">
+                        </a>
+                    </div>
+                    <div class="col-sm-3 col-margin " id="m_bottom">
+                        <a href="service.html#exit">
+                            <img class="service" src="static/img/exit.png" width="200" height="100">
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <a href="service.html">
+                <h4 align="center"> Learn More >></h4>
+                </a>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container" style="width:98%;box-shadow: 0 0 10px #cccccc;">
+        <div class="row" style=";border: 1px solid #ccc;background:#ffffff;">
+            <div class="col-sm-4">
+                <br>
+                <img class="hidden-xs hidden-sm" src="static/img/banner2.png">
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="col-sm-8">
+                <h2 align="center">What We Do?</h2>
+                <hr style="border:2px solid #efeff4;width:260px">
+                <br>
+                <p style="margin-left:20%;">
+                    <span style="font-size:40px">W</span>
+                    <span style="margin-left:0%;font-size:25px;">e are the most active hiring partners in India. We act as a bridge for the candidate seeking for job opportunities and Companies looking for new employees. We are the one who values the real talent than copy pasted CV.</span>
+                    <br>
+                    <br>
+                    <br>
+                </p>
+                <a href="about.html">
+                <button class="btn btn-default" style="margin-left:50%;">Learn More >></button></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container" style="width:98%;box-shadow: 0 0 10px #cccccc;">
+        <div class="row" style=";border: 1px solid #ccc;background:#ffffff;">
+            <div class="col-sm-12">
+                <h3 align="center">Our partners</h3>
+                <hr style="border:2px solid #efeff4;width:260px">
+                <marquee scrollamount="8" width="98%"><img src="static/img/p1.png" style="margin-right:40px;" width="300" height="70">
+                    <img src="static/img/p12.png" style="margin-right:40px;" height="100" width="100">
+                    <img src="static/img/p2.png" style="margin-right:40px;">
+                    <img src="static/img/p3.png" width="300" height="70" style="margin-right:40px;">
+                    <img src="static/img/p4.jpg" style="margin-right:40px;">
+                    <img src="static/img/p5.png" style="margin-right:40px;">
+                    <img src="static/img/p6.png" style="margin-right:40px;">
+                    <img src="static/img/p7.png" width="300" height="100" style="margin-right:40px;">
+                    <img src="static/img/p8.png" width="300" height="70" style="margin-right:40px;">
+                    <img src="static/img/p9.png" style="margin-right:40px;">
+                    <img src="static/img/p10.jpg" width="300" height="100" style="margin-right:40px;">
+                    <img src="static/img/p11.jpg" style="margin-right:40px;">
+                </marquee>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer style="background:#202020;">
+        <div class="container">
+            <div class="row">
+                <br>
+                <br>
+                <div class="col-sm-4">
+                    <div class="footer-group">
+                        <br>
+                        <br>
+                        <span class="glyphicon glyphicon-phone" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                        <br>
+                        <br>
+                        <div class="content" style="color:#838383;text-align:center">
+                            <h4>Phone</h4>
+                            <p>Phone: (080)41115676
+                                <br>
+                            </p>
+                            <p>Mobile: +91-9886559155
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="footer-group">
+                        <br>
+                        <br>
+                        <span class="glyphicon glyphicon-send" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                        <br>
+                        <br>
+                        <div class="content" style="color:#838383;text-align:center">
+                            <h4>Email</h4>
+                            <p><a href="mailto:janaki@dextertalentlabs.com" target="_blank"> janaki@dextertalentlabs.com</a></p>
+                            <p><a href="mailto:write2us@dextertalentlabs.com" target="_blank"> write2us@dextertalentlabs.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="footer-group">
+                        <br>
+                        <br>
+                        <span class="glyphicon glyphicon-map-marker" style="font-size:25px;margin-left:46%;color:#838383">
+                                </span>
+                        <br>
+                        <br>
+                        <div class="content" style="color:#838383;text-align:center">
+                            <h4>Address</h4>
+                            <address>
+                                Dexter Talent Labs,
+                                <br> Janatha Bazaar Signal,
+                                <br> Banashankari 3rd Stage,
+                                <br> Bangalore -560085
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <small> &copy2015, DEXTER TALENT LABS</small>
+            </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script>
+$(".upper1").click(function() {
+    $(".upper1").addClass("hideup");
+
+});
+</script>
+<style>
+.upper1 {
+    visibility: visible;
+    transition: all 2s;
+}
+
+.hideup {
+    margin-top: -2%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0E1E2F;
+    z-index: 99;
+    height: 100%;
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -100px;
+}
+</style>
+<script>
+jQuery(window).load(function() {
+    // will first fade out the loading animation
+    jQuery("#status").delay(1000).fadeOut();
+    // will fade out the whole DIV that covers the website.
+    jQuery("#preloader").delay(1000).slideUp("slow");
+    jQuery("#blacknav").addClass("navanim");
+    jQuery("#whitenav").addClass("navanim");
+    jQuery(".carousal").addClass("caranim");
+    jQuery(".getintouch").addClass("socialanim");
+})
+$(document).ready(function() {
+    setTimeout(trigss, 5000);
+
+    function trigss() {
+        $(".c1").css({
+            "opacity": "0"
+        });
+        setTimeout(trig2, 5000);
+    }
+
+    function trig2() {
+        $(".c2").css({
+            "opacity": "0"
+        });
+        setTimeout(trig3, 5000);
+    }
+
+    function trig3() {
+        $(".c3").css({
+            "opacity": "0"
+        });
+        setTimeout(trig1, 5000);
+    }
+
+    function trig1() {
+        $(".c1").css({
+            "opacity": "1"
+        });
+        $(".c2").css({
+            "opacity": "1"
+        });
+        $(".c3").css({
+            "opacity": "1"
+        });
+        $(".c4").css({
+            "opacity": "1"
+        });
+        setTimeout(trigss, 5000);
+    }
+});
+</script>
+
+</html>
